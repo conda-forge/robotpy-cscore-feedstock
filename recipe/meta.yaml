@@ -1,5 +1,5 @@
 {% set name = "robotpy-cscore" %}
-{% set version = "2022.0.2" %}
+{% set version = "2022.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 844ecb9a2ddbf85cd6acfe271319a0ab7e55617ecc79ad9a6b55bd367b985436
+  sha256: 5b2a7e09a2769dabe5c033490ce92fbb6dfb51cbe7aadaf1edf4749d9a91e67d
 
 build:
   number: 0
