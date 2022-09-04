@@ -33,7 +33,7 @@ requirements:
     - pynetworktables
     - python
     - {{ pin_compatible('numpy') }}
-    - {{ pin_compatible('libopencv') }}
+    - {{ pin_compatible('libopencv', max_pin='x.x') }}
     - {{ pin_compatible('py-opencv') }}
 
 test:
