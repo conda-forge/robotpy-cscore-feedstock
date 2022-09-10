@@ -34,7 +34,7 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - {{ pin_compatible('libopencv', max_pin='x.x') }}
-    - {{ pin_compatible('py-opencv') }}
+    - {{ pin_compatible('py-opencv', max_pin='x.x') }}
 
 test:
   imports:
