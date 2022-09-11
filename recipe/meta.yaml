@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5b2a7e09a2769dabe5c033490ce92fbb6dfb51cbe7aadaf1edf4749d9a91e67d
+  patches:
+    - no-cxx20.patch  # [not win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<35]
 
 requirements:
@@ -31,8 +33,8 @@ requirements:
     - pynetworktables
     - python
     - {{ pin_compatible('numpy') }}
-    - {{ pin_compatible('libopencv') }}
-    - {{ pin_compatible('py-opencv') }}
+    - {{ pin_compatible('libopencv', max_pin='x.x') }}
+    - {{ pin_compatible('py-opencv', max_pin='x.x') }}
 
 test:
   imports:

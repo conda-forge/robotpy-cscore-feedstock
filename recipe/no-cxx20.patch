@@ -1,0 +1,16 @@
+diff --git i/setup.py w/setup.py
+index 73d2720ab933..0d9634bc0f95 100644
+--- i/setup.py
++++ w/setup.py
+@@ -246,11 +246,10 @@ def cpp_flag(compiler, pfx, sep="="):
+     """Return the -std=c++[17/20] compiler flag.
+     The newer version is prefered when it is available).
+     """
+ 
+     flags = [
+-        f"{pfx}std{sep}c++20",
+         f"{pfx}std{sep}c++17",
+     ]
+ 
+     for flag in flags:
+         if has_flag(compiler, flag):
