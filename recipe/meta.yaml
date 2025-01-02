@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5b2a7e09a2769dabe5c033490ce92fbb6dfb51cbe7aadaf1edf4749d9a91e67d
   patches:
     - no-cxx20.patch  # [not win]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<35]
 
 requirements:
   build:
     - pkg-config
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     # V4L2_CTRL_TYPE_INTEGER_MENU was added in Linux 3.5
-    - sysroot_linux-64 2.17  # [linux64]
   host:
     - numpy
     - pip
