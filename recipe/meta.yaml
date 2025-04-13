@@ -29,6 +29,7 @@ requirements:
     - py-opencv
     - pybind11
     - python
+    - setuptools
   run:
     - pynetworktables
     - python
