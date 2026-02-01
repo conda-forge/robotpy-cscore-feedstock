@@ -12,7 +12,7 @@ source:
     - no-cxx20.patch  # [not win]
 
 build:
-  number: 3
+  number: 4
   skip: true  # [py<35]
 
 requirements:
@@ -29,6 +29,7 @@ requirements:
     - py-opencv
     - pybind11
     - python
+    - setuptools
   run:
     - pynetworktables
     - python
